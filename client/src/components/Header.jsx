@@ -48,9 +48,10 @@ const Header = () => {
     }
 
     return (
-        <div className={`flex justify-between h-16 sticky top-4 rounded-[20px] ml-4 mr-4 border-gray-700 border-b-4 ${isScrolled ? 'bg-[#51505266]' : 'bg-[#515052]'}`}>
+        <div className={`flex justify-between h-16 sticky top-4 rounded-[5px] ml-4 mr-4 border-gray-700 border-b-4 ${isScrolled ? 'bg-[#51505266]' : 'bg-[#515052]'}`}>
             <div className='m-2 pl-8 flex-none cursor-pointer' onClick={handleClick}>
-                <img src={Logo} alt="Logo" className='h-full rounded-[20px]' />
+                {/* <img src={Logo} alt="Logo" className='h-full rounded-[20px]' /> */}
+                <h1 className='text-black font-bold text-3xl italic'>My-Medi</h1>
             </div>
             <div className="flex items-center justify-around grow">
                 <div className='flex justify-between gap-3'>
@@ -70,7 +71,7 @@ const Header = () => {
                 </div>
             </div>
             <div className='flex items-center pr-8 ml-2 gap-2'>
-                <div className=''>
+                <div className='' id='connect-wallet'>
                     <ConnectWallet
                         theme="dark"
                         modalSize='compact'

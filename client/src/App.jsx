@@ -1,6 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
+import Footer from './components/Footer.jsx';
 import Header from './components/Header.jsx'
 import { Home, Files, Upload, Share, Remove } from './pages'
 import { useStateContext } from './context/index.jsx'
@@ -18,6 +19,7 @@ const App = () => {
         <Route path='/share' element={<Share />} />
         <Route path='/remove' element={<Remove />} />
       </Routes>
+      <Footer />
     </div>
   )
 }

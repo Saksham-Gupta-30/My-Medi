@@ -1,1 +1,0 @@
-## My-Medi Web3 Implementation

@@ -9,15 +9,14 @@ import { currentTimestamp } from '../utils';
 const StateContext = createContext();
 
 export const StateContextProvider = ({ children }) => {
-    // const { contract } = useContract('0x862441F3a8E967b15423BC5587773A9e8c2D9b37')
-    const { contract } = useContract('0xDc3bDC2e7605A856498b3cD509249A856FE9F7f3')
+    const { contract } = useContract(import.meta.env.VITE_REACT_APP_CONTRACT_ADDRESS)
     const { mutateAsync: Add } = useContractWrite(contract, 'Add')
     const { mutateAsync: Allow } = useContractWrite(contract, 'Allow')
 
     const address = useAddress();
     const signer = useSigner();
 
-    const contractCopy = new ethers.Contract('0xDc3bDC2e7605A856498b3cD509249A856FE9F7f3', MedicalRecord.abi, signer)
+    const contractCopy = new ethers.Contract(import.meta.env.VITE_REACT_APP_CONTRACT_ADDRESS, MedicalRecord.abi, signer)
 
     const uploadData = async ({ formData }) => {
         const data = {}
@@ -122,6 +121,22 @@ export const StateContextProvider = ({ children }) => {
         }
     }
 
+    const revokeAccess = async (_user) => {
+        try {
+            const res = await contractCopy.DisAllow(_user)
+            return {
+                data: res,
+                status: 'success'
+            }
+        } catch (error) {
+            return {
+                message: "Error while revoking access",
+                data: error.message,
+                status: 'error'
+            }
+        }
+    }
+
     return (
         <StateContext.Provider value={{
             contract,
@@ -129,7 +144,8 @@ export const StateContextProvider = ({ children }) => {
             uploadData,
             fetchData,
             getAccessList,
-            grantAccess
+            grantAccess,
+            revokeAccess
         }}>
             {children}
         </StateContext.Provider>

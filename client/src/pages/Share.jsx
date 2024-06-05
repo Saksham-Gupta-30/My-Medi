@@ -80,7 +80,7 @@ const Share = () => {
                                 })}
                             </tbody>
                         </table>) : (
-                        <p className='uppercase font-bold text-xl mt-4 w-full text-center'>No one access</p>
+                        <p className='uppercase font-bold text-xl mt-4 w-full text-center'>No one can access</p>
                     )}
                 </div>
             </div>

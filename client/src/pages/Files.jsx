@@ -70,7 +70,7 @@ const Files = () => {
     return (
         <div className='w-full flex h-screen'>
             {isLoading === true && (<Loader text="Fetching" />)}
-            <div className='w-1/2 p-4 border-r-2 border-gray-500 flex flex-col justify-start items-center'>
+            <div className='w-1/2 p-4 border-gray-500 flex flex-col justify-start items-center'>
                 <div className='w-full flex flex-col items-center mt-8 text-xl text-center p-2 bg-[#2c2f3299] rounded-sm'>
                     <span className='font-bold'>Address: <span className='font-semibold underline'>{account}</span></span>
                     {/* <button className='w-full bg-purple-700 p-2 mt-2 rounded-sm border-2 border-gray-800 uppercase font-bold'>Get my files</button> */}

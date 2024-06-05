@@ -41,7 +41,7 @@ const Upload = () => {
     return (
         <div className='flex w-screen h-screen'>
             <form onSubmit={handleSubmit} className="flex w-1/2">
-                <div className='flex flex-col w-full p-4 border-r-2 border-gray-500 items-center justify-between'>
+                <div className='flex flex-col w-full p-4 border-gray-500 items-center justify-between'>
                     <h1 className="text-lg font-semibold mt-8 bg-[#2c2f3299] w-full text-center p-2 rounded-sm">Upload Your File</h1>
                     <div className='flex justify-center items-center flex-col mb-[250px] border-2 w-full p-4 rounded-md border-gray-400 bg-[#2c2f3233] hover:bg-[#2c2f3255]'>
                         <main className="flex items-center justify-center bg-gray-100 font-sans rounded-xl">

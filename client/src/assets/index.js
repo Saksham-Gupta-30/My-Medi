@@ -6,5 +6,6 @@ import Files from './files.svg';
 import Remove from './remove.svg';
 import Logout from './logout.svg';
 import Load from './load.svg'
+import Link from './link.svg';
 
-export { Logo, Home, Upload, Share, Files, Remove, Logout, Load };
+export { Logo, Home, Upload, Share, Files, Remove, Logout, Load, Link };
