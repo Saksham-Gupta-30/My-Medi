@@ -15,7 +15,7 @@ My-Medi is a secure platform that allows you to store, manage, and share your me
 - **Styling**: Tailwind CSS
 - **Blockchain Integration**: Thirdweb
 - **File Storage**: Pinata
-- **Blockchain Platform**: Ethereum (Sepolia Testnet)
+- **Blockchain Platform**: Ethereum
 - **Smart Contracts**: Solidity
 
 ## Guide to Use My-Medi
@@ -26,17 +26,12 @@ To get started, you need a wallet to store your digital assets. We recommend usi
 ### Step 2: Connect Wallet
 Click on the "Connect Wallet" button in the header to sign in using your wallet. This will give you access to your dashboard.
 
-### Step 3: Upload Medical Records
-Upload your medical records securely to the blockchain. Your data will be encrypted and accessible only by you and authorized individuals.
-
-### Step 4: View Medical Records
-View your medical records anytime, anywhere using our secure platform. You can download your files as needed.
-
-### Step 5: Share Access
-Share access to your medical records with healthcare providers or family members. You control who can view your data.
-
-### Step 6: Revoke Access
-Revoke access to your medical records at any time. This will prevent unauthorized individuals from viewing your data.
+### Step 3: Use the Features from the Dashboard
+Once connected, you can:
+- **Upload Medical Records**: Navigate to the upload section, select your files, and upload them securely to the blockchain.
+- **View Medical Records**: Access the records section to view and download your medical records.
+- **Share Access**: Share your records with healthcare providers or family members by entering their Ethereum addresses.
+- **Revoke Access**: Manage and revoke access to your records anytime from the dashboard.
 
 ## Setting Up My-Medi
 
