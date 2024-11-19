@@ -11,7 +11,7 @@ const Share = () => {
         const getData = async () => {
             // const res = await contract.call("ShareAccess")
             const res = await getAccessList()
-            console.log(res.data[0])
+            // console.log(res.data[0])
             if (res.data.length > 0) {
                 // con
                 setData(res.data)
@@ -33,7 +33,7 @@ const Share = () => {
         // console.log(otherAccount)
         try {
             const res = grantAccess(otherAccount)
-            console.log(res)
+            // console.log(res)
         } catch (error) {
             console.log(error)
         }

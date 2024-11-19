@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 
 import { useStateContext } from '../context/index'
+import Loader from '../components/Loader'
 
 const Upload = () => {
     const [fileName, setFileName] = useState('NO FILE SELECTED')
     const [file, setFile] = useState(null)
+    const [isLoading, setIsLoading] = useState(false)
 
     const { uploadData, address } = useStateContext()
 
@@ -17,12 +19,14 @@ const Upload = () => {
         const formData = new FormData();
         formData.append('file', file);
         // console.log(formData.get('file').type.split('/')[1])
+        setIsLoading(true)
         const res = await uploadData({ formData })
         if (res.status === 'success') {
             alert('File Uploaded Successfully')
         } else {
             alert('Error while uploading file')
         }
+        setIsLoading(false)
         setFileName('NO FILE SELECTED')
         setFile(null)
     }
@@ -40,6 +44,7 @@ const Upload = () => {
 
     return (
         <div className='flex w-screen h-screen'>
+            {isLoading === true && (<Loader text="Uploading..." />)}
             <form onSubmit={handleSubmit} className="flex w-1/2">
                 <div className='flex flex-col w-full p-4 border-gray-500 items-center justify-between'>
                     <h1 className="text-lg font-semibold mt-8 bg-[#2c2f3299] w-full text-center p-2 rounded-sm">Upload Your File</h1>
